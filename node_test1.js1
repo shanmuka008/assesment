@@ -1,0 +1,10 @@
+const csvFilePath='C:\\Users\\Toshiba\\Downloads\\customer-data.csv'
+const csv=require('csvtojson')
+csv()
+.fromFile(csvFilePath)
+.on('json',(jsonObj)=>{
+console.log(jsonObj)
+})
+.on('done',(error)=>{
+    console.log('end')
+})
